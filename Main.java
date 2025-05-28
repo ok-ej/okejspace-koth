@@ -13,35 +13,32 @@ public final class Main extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        // Initialize config manager
         configManager = new ConfigManager(this);
         configManager.loadConfig();
 
-        // Initialize event manager
         eventManager = new EventManager(this);
 
-        // Register commands
-        getCommand("fallkoth").setExecutor(new CommandHandler(this));
+        getCommand("okejkoth").setExecutor(new CommandHandler(this));
 
-        // Register listeners
         getServer().getPluginManager().registerEvents(new PlayerListener(this), this);
 
         getLogger().info("");
-        getLogger().info("PLUGIN FALLHUB-KOTH ZOSTAŁ WŁĄCZONY");
-        getLogger().info("DISCORD: DC.FALLHUB.PL");
+        getLogger().info(" PLUGIN OKEJSPACE-KOTH");
+        getLogger().info(" Plugin został uruchomiony!");
+        getLogger().info(" Discord: https://dc.okej.space");
         getLogger().info("");
     }
 
     @Override
     public void onDisable() {
-        // Stop any running event when the plugin is disabled
         if (eventManager.isEventRunning()) {
             eventManager.stopEvent();
         }
 
         getLogger().info("");
-        getLogger().info("PLUGIN FALLHUB-KOTH ZOSTAŁ WYŁĄCZONY");
-        getLogger().info("DISCORD: DC.FALLHUB.PL");
+        getLogger().info(" PLUGIN OKEJSPACE-KOTH");
+        getLogger().info(" Plugin został zatrzymany!");
+        getLogger().info(" Discord: https://dc.okej.space");
         getLogger().info("");
     }
 
