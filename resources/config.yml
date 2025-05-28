@@ -1,0 +1,59 @@
+#
+# Konfiguracja do pluginu OKEJSPACE-KOTH
+# Discord: dc.okej.space
+# Autor pluginu: ok_ej
+#
+
+# Ustawienia eventów
+events:
+  koth1:
+    # Czas w sekundach w jakich gracz ma stać w regionie
+    time-to-win: 60
+    # Ustawienie regionu za pomocą WorldGuard
+    region:
+      name: "koth1"
+      world: "world"
+    # Ustawienie bossbara
+    bossbar:
+      title: "&x&F&D&C&3&0&0&lᴋ&x&F&E&C&B&2&2&lᴏ&x&F&E&D&4&4&3&lᴛ&x&F&F&D&C&6&5&lʜ 1 &8× &fPrzejmuje &6%player% &fi pozostało &6%time%s"
+      color: "BLUE"
+      style: "SOLID"
+    # Wiadomości
+    messages:
+      event-start: "&aEvent &2KOTH 1 &awystartował! Znajduje się on na koordynatach &2X Y Z"
+      event-stop: "&cEvent &4KOTH 1 &czostał zatrzymany przez administratora!"
+      event-win: "&aGracz &2%player% &awygrał event KOTH 1!"
+    # Komendy po wygranej
+    win-commands:
+      - "give %player% diamond 64"
+      - "eco give %player% 10000"
+
+  koth2:
+    time-to-win: 45
+    region:
+      name: "koth2"
+      world: "world"
+    bossbar:
+      title: "&x&F&D&C&3&0&0&lᴋ&x&F&E&C&B&2&2&lᴏ&x&F&E&D&4&4&3&lᴛ&x&F&F&D&C&6&5&lʜ 2 &8× &fPrzejmuje &6%player% &fi pozostało &6%time%s"
+      color: "YELLOW"
+      style: "SOLID"
+    messages:
+      event-start: "&aEvent &2KOTH 2 &awystartował! Znajduje się on na koordynatach &2X Y Z"
+      event-stop: "&cEvent &4KOTH 2 &czostał zatrzymany przez administratora!"
+      event-win: "&aGracz &2%player% &awygrał event KOTH 2!"
+    win-commands:
+      - "give %player% gold_ingot 32"
+      - "eco give %player% 5000"
+
+
+# Ustawienia wiadomości
+messages:
+  prefix: "&x&F&D&C&3&0&0&lᴋ&x&F&E&C&B&2&2&lᴏ&x&F&E&D&4&4&3&lᴛ&x&F&F&D&C&6&5&lʜ &8× "
+  event-start: "&aEvent KOTH wystartował! Znajduje się na strefie PVP!"
+  event-stop: "&cEvent KOTH został zatrzymany przez administratora!"
+  event-win: "&aGracz &2%player% &awygrał event KOTH!"
+  no-permission: "&cNie posiadasz uprawnień!"
+  already-running: "&cNie posiadasz uprawnień!"
+  not-running: "&cEvent KOTH nie jest aktywny!"
+  region-not-found: "&cNie znaleziono regionu w pluginie WorldGuard"
+  reload-success: "&aKonfiguracja pluginu została &2przeładowana"
