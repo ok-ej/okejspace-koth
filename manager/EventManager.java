@@ -60,11 +60,9 @@ public class EventManager {
             return false;
         }
 
-        // Create new active KOTH
         ActiveKoth activeKoth = new ActiveKoth(config, region);
         activeKoths.put(kothId, activeKoth);
 
-        // Show boss bar to all players
         for (Player player : Bukkit.getOnlinePlayers()) {
             activeKoth.getBossBar().addPlayer(player);
         }
