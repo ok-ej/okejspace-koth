@@ -1,0 +1,15 @@
+name: OKEJSPACE-KOTH
+version: '${project.version}'
+main: pl.okej.fallhubkoth.Main
+api-version: '1.18'
+depend: [WorldGuard]
+authors: [ok_ej]
+commands:
+  okejkoth:
+    description: Główna komenda pluginu, dla administratora
+    usage: /okejkoth <start|stop|reload>
+    permission: okejkoth.admin
+permissions:
+  okejkoth.admin:
+    description: Permisja dla administratora
+    default: op
